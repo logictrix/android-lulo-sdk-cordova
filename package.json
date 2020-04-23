@@ -26,8 +26,6 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       }
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   }
 }

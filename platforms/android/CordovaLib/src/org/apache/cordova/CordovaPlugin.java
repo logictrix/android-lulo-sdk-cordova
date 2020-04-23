@@ -113,21 +113,8 @@ public class CordovaPlugin {
      * @return                Whether the action was valid.
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-       // CordovaArgs cordovaArgs = new CordovaArgs(args);
-		
-		if ("beep".equals(action)) {
-        final long duration = args.getLong(0);
-        cordova.getActivity().runOnUiThread(new Runnable() {
-            public void run() {
-      
-                callbackContext.success(); // Thread-safe.
-            }
-        });
-        return true;
-    }
-    return false;
-		
-       // return execute(action, cordovaArgs, callbackContext);
+        CordovaArgs cordovaArgs = new CordovaArgs(args);
+        return execute(action, cordovaArgs, callbackContext);
     }
 
     /**

@@ -19,8 +19,14 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-
+		 
+		<framework src="com.google.code.gson:gson:2.8.5" />
+		<framework src="com.android.support:appcompat-v7:28.0.0" />
+		<framework src="com.android.support.constraint:constraint-layout:1.1.3" />
+		<framework src="com.android.support:support-v4:28.0.0" />
+		
         <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
+		
     </platform>
 
 </plugin>

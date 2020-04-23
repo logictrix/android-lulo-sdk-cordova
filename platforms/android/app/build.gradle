@@ -112,9 +112,9 @@ if (hasBuildExtras2) {
 
 // Set property defaults after extension .gradle files.
 ext.cdvCompileSdkVersion = cdvCompileSdkVersion == null ? (
-    defaultCompileSdkVersion == null 
-        ? privateHelpers.getProjectTarget()
-        : defaultCompileSdkVersion 
+        defaultCompileSdkVersion == null
+                ? privateHelpers.getProjectTarget()
+                : defaultCompileSdkVersion
 ) : Integer.parseInt('' + cdvCompileSdkVersion);
 
 if (ext.cdvBuildToolsVersion == null) {
@@ -137,7 +137,7 @@ ext.cdvMinSdkVersion = cdvMinSdkVersion == null ? defaultMinSdkVersion : Integer
 if (cdvMaxSdkVersion != null) {
     ext.cdvMaxSdkVersion = Integer.parseInt('' + cdvMaxSdkVersion)
 }
-ext.cdvTargetSdkVersion = cdvTargetSdkVersion == null ? defaultTargetSdkVersion  : Integer.parseInt('' + cdvTargetSdkVersion)
+ext.cdvTargetSdkVersion = cdvTargetSdkVersion == null ? defaultTargetSdkVersion : Integer.parseInt('' + cdvTargetSdkVersion)
 
 ext.cdvVersionCode = cdvVersionCode == null ? null : Integer.parseInt('' + cdvVersionCode)
 
@@ -194,13 +194,13 @@ android {
             maxSdkVersion cdvMaxSdkVersion
         }
 
-        if(cdvTargetSdkVersion != null) {
+        if (cdvTargetSdkVersion != null) {
             targetSdkVersion cdvTargetSdkVersion
         }
     }
 
     lintOptions {
-      abortOnError false;
+        abortOnError false;
     }
 
     compileSdkVersion cdvCompileSdkVersion
@@ -217,31 +217,31 @@ android {
 
         productFlavors {
             armeabi {
-                versionCode defaultConfig.versionCode*10 + 1
+                versionCode defaultConfig.versionCode * 10 + 1
                 ndk {
                     abiFilters = ["armeabi"]
                 }
             }
             armv7 {
-                versionCode defaultConfig.versionCode*10 + 2
+                versionCode defaultConfig.versionCode * 10 + 2
                 ndk {
                     abiFilters = ["armeabi-v7a"]
                 }
             }
             arm64 {
-                versionCode defaultConfig.versionCode*10 + 3
+                versionCode defaultConfig.versionCode * 10 + 3
                 ndk {
                     abiFilters = ["arm64-v8a"]
                 }
             }
             x86 {
-                versionCode defaultConfig.versionCode*10 + 4
+                versionCode defaultConfig.versionCode * 10 + 4
                 ndk {
                     abiFilters = ["x86"]
                 }
             }
             x86_64 {
-                versionCode defaultConfig.versionCode*10 + 5
+                versionCode defaultConfig.versionCode * 10 + 5
                 ndk {
                     abiFilters = ["x86_64"]
                 }
@@ -250,7 +250,7 @@ android {
     } else if (Boolean.valueOf(cdvVersionCodeForceAbiDigit)) {
         // This provides compatibility to the default logic for versionCode before cordova-android 5.2.0
         defaultConfig {
-            versionCode defaultConfig.versionCode*10
+            versionCode defaultConfig.versionCode * 10
         }
     }
 
@@ -264,7 +264,8 @@ android {
             release {
                 // These must be set or Gradle will complain (even if they are overridden).
                 keyAlias = ""
-                keyPassword = "__unset" // And these must be set to non-empty in order to have the signing step added to the task graph.
+                keyPassword = "__unset"
+                // And these must be set to non-empty in order to have the signing step added to the task graph.
                 storeFile = null
                 storePassword = "__unset"
             }
@@ -290,11 +291,30 @@ android {
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: '*.jar')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.code.gson:gson:2.8.5'
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
     implementation "com.android.support:support-v4:27.+"
     // SUB-PROJECT DEPENDENCIES END
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+//    implementation(name: 'libScanovateImagingHybridLiveness_4_1_0', ext: 'aar')
+
+
+    implementation 'com.google.android.gms:play-services-vision:17.0.2'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
 }
 
 def promptForReleaseKeyPassword() {
@@ -311,9 +331,9 @@ def promptForReleaseKeyPassword() {
 
 gradle.taskGraph.whenReady { taskGraph ->
     taskGraph.getAllTasks().each() { task ->
-      if(['validateReleaseSigning', 'validateSigningRelease', 'validateSigningArmv7Release', 'validateSigningX76Release'].contains(task.name)) {
-         promptForReleaseKeyPassword()
-      }
+        if (['validateReleaseSigning', 'validateSigningRelease', 'validateSigningArmv7Release', 'validateSigningX76Release'].contains(task.name)) {
+            promptForReleaseKeyPassword()
+        }
     }
 }
 

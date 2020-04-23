@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="movilred_fucsia">#e5168c</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_blue">#660C2D4F</color>
+    <color name="transparent_black">#BF202527</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans_card_blue_selected">#202527</color>
+    <color name="trans_card_blue">#26295f83</color>
+    <color name="btn_blue">#768c9e</color>
+    <color name="border_btn">#295f83</color>
+    <color name="solid_background">#002530</color>
+    <color name="solid_yellow_gnb">#E6FF00</color>
+
+    <color name="startColor">#51BFA5</color>
+    <color name="centerColor">#74C177</color>
+    <color name="endColor">#8CC358</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorcircle">#00824A</color>
+    <color name="colorcirclesecont">#2FB67A</color>
+    <color name="colorcirclethird">#DDDDDD</color>
+    <color name="colortextfirst">#6557A6</color>
+    <color name="colortextsecond">#AFB0B0</color>
+    <color name="colorbtnbg">#92C83D</color>
+    <color name="colortextthird">#5C4CA0</color>
+    <color name="colorviewfirst">#00824A</color>
+    <color name="colorviewsecond">#2FB67A</color>
+    <color name="colorviewthird">#C8C6C6</color>
+    <color name="colorweare">#626365</color>
+    <color name="colorselfi">#06854E</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#575757</color>
+    <color name="dot_dark_screen2">#575757</color>
+    <color name="dot_dark_screen3">#575757</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#AAAAAA</color>
+    <color name="dot_light_screen2">#AAAAAA</color>
+    <color name="dot_light_screen3">#AAAAAA</color>
+    <color name="colorhomeone">#5A568E</color>
+    <color name="colorhometwo">#B06CBC</color>
+    <color name="colorremember">#30B67A</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+
+
+</resources>
