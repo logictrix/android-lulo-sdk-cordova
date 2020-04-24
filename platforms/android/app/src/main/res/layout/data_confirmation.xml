@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/labeltest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="Escanear Documento"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="417dp"
+            android:layout_height="741dp"
+            android:background="@drawable/frontid3x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_subtract"
+            android:layout_width="417dp"
+            android:layout_height="741dp"
+            android:background="@drawable/subtract"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="304dp"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:text="Please make sure all the text on the ID image is readable,otherwise retry."
+            android:textColor="@color/snWhite"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.108" />
+
+    <Button
+            android:id="@+id/buttonConfirm"
+
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/retryButtonLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/radius"
+            android:fontFamily="@font/quicksand_medium"
+            android:onClick="confirmButtonPressed"
+            android:text="CONTINUAR"
+            android:textColor="#003041"
+            android:textColorHint="#00A01E1E"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRetry"
+        android:layout_width="224dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/snClear"
+        android:onClick="retryButtonPressed"
+        android:text="Tomar nuevamente"
+        android:textAllCaps="false"
+        android:textColor="#DFFF0C"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </android.support.constraint.ConstraintLayout>

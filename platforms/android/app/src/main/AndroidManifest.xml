@@ -3,21 +3,31 @@
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:launchMode="singleTop" android:name=".UI.Face.FaceActivity" />
-        <activity android:launchMode="singleTop" android:name=".UI.Face.tip2Face" />
-        <activity android:launchMode="singleTop" android:name=".UI.Face.tip1Face" />
-        <activity android:launchMode="singleTop" android:name=".UI.GetConfig.GetConfigActivity" />
-        <activity android:launchMode="singleTop" android:name=".UI.SplashScreen" />
+        <activity android:launchMode="singleTop" android:name=".UI.GetData.GetDataActivity" />
+        <activity android:launchMode="singleTop" android:name=".UI.Document.tip2Doc" android:screenOrientation="portrait" />
+        <activity android:name=".UI.Document.tip1Doc" android:screenOrientation="portrait" />
+        <activity android:name=".UI.MaxAttemptFailed" android:screenOrientation="portrait" />
+        <activity android:name=".UI.Document.DocActivity" android:screenOrientation="portrait" />
+        <activity android:launchMode="singleTop" android:name=".UI.Face.FaceActivity" android:screenOrientation="portrait" />
+        <activity android:launchMode="singleTop" android:name=".UI.Face.tip2Face" android:screenOrientation="portrait" />
+        <activity android:launchMode="singleTop" android:name=".UI.Face.tip1Face" android:screenOrientation="portrait" />
+        <activity android:launchMode="singleTop" android:name=".UI.GetConfig.GetConfigActivity" android:screenOrientation="portrait" />
+        <activity android:launchMode="singleTop" android:name=".UI.SplashScreen" android:screenOrientation="portrait" />
+        <activity android:name=".kyc.ImageConformationActivity" android:screenOrientation="portrait" />
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode" android:label="@string/activity_name" android:launchMode="singleTop" android:name=".MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true" android:name="org.apache.cordova.camera.FileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/camera_provider_paths" />
-        </provider>
+        <activity android:name="com.acuant.mobilesdk.detect.PDF417.CameraPDF417" />
+        <activity android:name="com.acuant.mobilesdk.detect.CameraCardDetectManual" />
+        <activity android:name="com.acuant.mobilesdk.detect.Camera2CardDetectManual" />
+        <activity android:name="com.acuant.mobilesdk.detect.Camera2FacialRecognitionManual" />
     </application>
 </manifest>

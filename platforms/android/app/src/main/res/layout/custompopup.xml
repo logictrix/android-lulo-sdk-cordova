@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="375dp"
+    android:layout_gravity="center"
+    android:background="@drawable/border_style"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/popup_tittle"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/muli_bold"
+        android:text="Número de cédula y/o código dactilar incorrectos"
+        android:textAlignment="center"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeStepGranularity="1sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/muli_bold"
+        android:text="Verifica que los datos ingresados se encuentren bien digitados y correspondan exactamente con los de la cédula de ciudadanía."
+        android:textAlignment="center"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeStepGranularity="1sp"/>
+
+    <Button
+        android:id="@+id/btnfollow"
+        android:layout_width="313dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/radius"
+        android:fontFamily="@font/muli_bold"
+        android:text="Corregirlos"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+
+</LinearLayout>

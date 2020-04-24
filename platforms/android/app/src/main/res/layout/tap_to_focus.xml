@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotation="90"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/transparent_container_black" />
+
+    <ImageView
+        android:id="@+id/cedula"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/frame"
+        android:layout_alignLeft="@+id/frame"
+        android:layout_alignTop="@+id/frame"
+        android:layout_alignBottom="@+id/frame"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="290dp"
+        android:background="@drawable/group8" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/frame"
+        android:layout_alignBottom="@+id/frame"
+        android:layout_alignLeft="@+id/frame"
+        android:layout_alignRight="@+id/frame"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/muli"
+        android:gravity="top"
+        android:paddingStart="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_large"
+        android:text="Coloca la cara posterior de tu cédula en el recuadro."
+        android:textAlignment="gravity"
+        android:textColor="@android:color/white"
+        android:textSize="12dp" />
+
+
+</RelativeLayout>

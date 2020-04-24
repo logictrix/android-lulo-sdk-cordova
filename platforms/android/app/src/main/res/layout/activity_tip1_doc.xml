@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:id="@+id/lin_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/pad_50dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewfirst" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewsecond" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_view"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Tips para una buena foto"
+        android:textColor="@color/colortextthird"
+        android:textSize="@dimen/txt_20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lin_view" />
+
+
+    <Button
+        android:id="@+id/btn_siguiente1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Siguiente"
+        android:textAllCaps="false"
+        android:onClick="capture"
+        android:textColor="#5B2797"
+        android:textColorHighlight="#E6FF00"
+        android:textColorHint="#00A01E1E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="228dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tool"
+        app:srcCompat="@drawable/group3" />
+
+    <TextView
+        android:id="@+id/annotation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="38dp"
+        android:fontFamily="@font/gilroy_semibold"
+        android:gravity="center"
+        android:text="Solo tu documento de identidad"
+        android:textColor="#5B2797"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCamera" />
+
+    <ImageView
+        android:id="@+id/dots"
+        android:layout_width="37dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dots1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="255dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Solamente debe aparecer el documento de identidad en la cámara"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/annotation" />
+
+
+</android.support.constraint.ConstraintLayout>

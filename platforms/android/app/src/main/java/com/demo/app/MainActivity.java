@@ -37,9 +37,6 @@ public class MainActivity extends CordovaActivity
         if (extras != null && extras.getBoolean("cdvStartInBackground", false)) {
            // moveTaskToBack(true);
         }
-
-        // Set by <content src="index.html" /> in config.xml
-        loadUrl(launchUrl);
         startActivity(new Intent(getApplicationContext(), SplashScreen.class));
         finish();
     }

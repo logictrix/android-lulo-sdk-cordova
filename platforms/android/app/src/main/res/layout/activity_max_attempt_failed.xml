@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:id="@+id/lin_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/pad_50dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewfirst" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewsecond" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_3dp"
+            android:layout_weight="1"
+            android:background="@color/colorviewthird" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_view"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Validación de tu identidad"
+        android:textColor="@color/colortextthird"
+        android:textSize="@dimen/txt_20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lin_view" />
+
+
+    <TextView
+        android:id="@+id/tv_fea_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_afe"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="396dp"
+        android:background="@color/transparent"
+        android:indeterminate="true"
+        android:indeterminateTint="#5B2797"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/btnbgsecond"
+        android:fontFamily="@font/gilroy_semibold"
+        android:text="Reintentar"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#E6FF00"
+        android:textColorHint="#00A01E1E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewCamera"
+        android:layout_width="130dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tool"
+        app:srcCompat="@drawable/bad_check2" />
+
+    <TextView
+        android:id="@+id/annotation"
+        android:layout_width="343dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="38dp"
+        android:fontFamily="@font/gilroy_semibold"
+        android:gravity="center"
+        android:text="¡Se ha interrumpido el proceso!"
+        android:textColor="#5B2797"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCamera" />
+
+
+</android.support.constraint.ConstraintLayout>
